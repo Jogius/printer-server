@@ -8,4 +8,7 @@ app.use(cors({origin: process.env.ORIGIN_DOMAIN}));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+const printRouter = require("./routes/print");
+app.use("/print", printRouter);
+
 module.exports = app;
